@@ -1,0 +1,357 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Ayush Vora - CV},
+    pdfauthor={Ayush Vora},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Ayush Vora
+
+        \vspace{5 pt}
+
+        \normalsize
+        \mbox{Vancouver, BC}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{mailto:ayushtvora@gmail.com}{ayushtvora@gmail.com}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/ayushtvora}{linkedin.com/in/ayushtvora}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://github.com/ayushtvora/}{github.com/ayushtvora}}%
+        \kern 5.0 pt%
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+
+
+    \section{Education}
+    \begin{twocolentry}{Sep 2021 – May 2026}
+        \textbf{University of British Columbia}, B.Sc, Computer Science and Statistics Major
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item \textbf{Cumulative Average:} 86.1\%, 3.98/4.33 GPA
+            \item \textbf{Relevant Courses:} Advanced Algorithm Design, Randomized Algorithms, Computational Theory, Machine Learning, Quantum Computation Statistical Inference, Time-series Analysis, Databases.
+        \end{highlights}
+    \end{onecolentry}
+
+
+    \section{Interests}
+    \begin{onecolentry}
+        Algorithms, CS Education,  Theoretical Computer Science, Randomized Algorithms, Communication, Computational Geometry, Software Engineering, Data Structures, Machine Learning, Data Science, Data Analysis, Statistical Inference.
+    \end{onecolentry}
+
+    
+    \section{Written Work}
+    \begin{twocolentry}
+        {Dec 2024}
+        {\textbf{The Moment-Matching Technique and it's Application}}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{highlights}
+        \item \textbf{Authors:} Ayush Vora, supervised by Nathan Harms
+        \item \textbf{Link:} \href{https://github.com/ayushtvora/moment-matching}{[GitHub]}
+        \item Surveyed and explained the Moment Matching technique by summarizing Raskhodnikova et al. (2009), focusing on how it is used to prove lower bounds for approximating the Distribution Support Size problem.
+        \item Demonstrated how Moment Matching naturally arises in randomized algorithm analysis and showed how it can be applied both to the Distribution Support Size problem and to related problems in probabilistic computation.
+        \item Presented the material in a lecture-note style, distilling complex theoretical ideas into accessible explanations intended to teach the technique to students or researchers new to the area.
+
+        
+    \end{highlights}
+    \vspace{0.20 cm}
+    \begin{twocolentry}
+        {Dec 2024}
+        {\textbf{Dequantization of Quantum Recommendation Systems}}
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{highlights}
+        \item \textbf{Authors:} Ayush Vora, Joshua Ho, Paige Ingram
+        \item \textbf{Link:} \href{https://drive.google.com/file/d/1Pq-bbs979KGIRotfqBK7qK1oonJdizlU/view?usp=drive_link}{[Google Drive]}
+        \item Explains the quantum recommendation system algorithm of Kerenidis \& Prakash, breaking down its data structures, singular value estimation, and quantum projection steps into an accessible, course-friendly exposition. 
+        \item Shows how to dequantize the quantum algorithm by replacing its strong input assumptions (like efficient quantum state preparation and QRAM) with equivalent classical sampling-and-query access assumptions, following Tang’s framework. This demonstrates that the supposed exponential quantum speedup collapses to only a polynomial slowdown. 
+        \item Presents a full classical recommendation system algorithm (based on the MODFKV method) that efficiently produces low-rank approximations and samples good recommendations—illustrating that classical algorithms can match the quantum algorithm’s performance under fair assumptions. 
+    \end{highlights}
+
+
+    \section{Teaching Experience}
+    \begin{twocolentry}{Jan 2026 – May 2026}
+        \textbf{Teaching Assistant,} UBC - CPSC 121: Models of Computation
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{twocolentry}{Sep 2025 – Jan 2026}
+        \textbf{Teaching Assistant,} UBC - CPSC 421: Introduction to Theory of Computing
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{twocolentry}{Jan 2025 – May 2025}
+        \textbf{Teaching Assistant,} UBC - CPSC 221: Basic Algorithms and Data Structures
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{twocolentry}{Sep 2024 – Jan 2025}
+        \textbf{Teaching Assistant,} UBC - CPSC 110: Computation, Programs, and Programming
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{twocolentry}{Jan 2022 – Jan 2023}
+        \textbf{Secondary School Tutor,} Mayfield SS - Computer Science 12, Math 12, Calculus 12
+    \end{twocolentry}
+
+
+    \section{Professional Experience}
+    \begin{twocolentry}{Jan 2025 - Jan 2026}
+        \textbf{Systems Administrator Co-op}, BC Centre for Ability
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Automated archival and optimization of company's Salesforce database, clearing out 520 GB of storage for future use.
+            \item Mass-deployed MS Office 365 to 100+ computers, involving organizing appointments with clients, creating automation scripts, and presenting a demonstration of new features.
+            \item Assisted 100+ employees with miscellaneous IT needs, including hardware replacements, software installation, and other troubleshooting issues. 
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.2 cm}
+    \begin{twocolentry}{Jan 2024 - Apr 2024}
+        \textbf{Toolset Software Developer / Data Analyst Co-op}, ATS Corporation
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Implemented MS Excel Macros using Visual Basics for Applications to automate tasks and generate visual graphics for data, saving 150 hours of repetitive work yearly.
+            \item Expanded and improved on previous iterations of Excel Macros to increase clarity of current data, leading to more impactful analysis of key performance indicators of company success.
+            \item Created and automated a data pipeline to inject data into a Databricks SQL server, allowing for improved efficiency of KPI dashboard generation. Through Databricks, set the capabilities to implement a machine learning model for data analysis.
+            \item Presented data findings to the Project Management team to report strengths, weaknesses, and opportunities for improvement based on KPI analytics.
+            \item Fixed 12 bugs present in the Java-based report-generator METRIX, improving app efficiency and increasing productivity by 33\%. 
+        \end{highlights}
+    \end{onecolentry}
+    \vspace{0.2 cm}
+    \begin{twocolentry}{May 2022 – Sep 2022}
+        \textbf{IT Technician}, Rootnet Solutions
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Deployed 200+ laptops and desktops successfully to 5 Air Canada offices, including YYZ International Airport.
+            \item Served as the primary point of contact for Air Canada YYZ Branch for IMAC needs.
+        \end{highlights}
+    \end{onecolentry}
+
+    
+    \section{Projects}
+        \begin{twocolentry}
+            {\href{https://github.com/ayushtvora/smart-alarm-clock}{github.com: smart-alarm}}
+            \textbf{Wakey Wakey! (WIP)}
+        \end{twocolentry}
+        \vspace{0.1 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Engineered a smart alarm clock using a Raspberry Pi 4, involving modelling and 3D printing a shell and case for the display and stand.   
+                \item Programmed a back-end API and cloud-hosted NO-SQL database to update and store user data, saved alarms, settings, and more. The physical clock polls from the database to stay updated often. 
+                \item Designed a front-end application where the user can set alarms, create goals, and change user settings by communicating to the database.
+                \item Tools used: Raspberry Pi 4, Linux, MongoDB, Python (FastAPI), JavaScript (React Native), Bambu Studio.
+            \end{highlights}
+        \end{onecolentry}
+    
+        \begin{twocolentry}
+            {\href{https://github.com/ayushtvora/spoti-paw}{github.com: spoti-paw}}
+            \textbf{SpotiPaw}
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed a motion-controlled media player for Spotify, which detects hand gestures and controls music accordingly
+                \item Created with an ultrasound sensor connected to an Arduino, which connects to a Flask server managing the Spotify API. 
+                \item Tools Used: C (Arduino), Python (Flask), Spotify API. 
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}
+        {\href{https://github.com/ayushtvora/SNASA}{github.com: SNASA}}
+            \textbf{SNASA}
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Created an accessible website where the user can view different space-related objects, such as galaxies, planets, and satellites.
+                \item Used SQL to create different queries, including adding, removing, and updating current objects, and different views of current systems.
+                \item Tools Used: PHP, SQL (Oracle), HTML, JS 
+            \end{highlights}
+        \end{onecolentry}
+
+
+
+    \section{Skills}
+        \begin{onecolentry}
+            \textbf{JavaScript} (React/React Native, Node.js), 
+            \textbf{Python} (FastAPI, Flask), 
+            \textbf{Java} (Android Studio, Swing), 
+            \textbf{C} (Arduino), 
+            \textbf{C++}, 
+            \textbf{C\#} (Unity), 
+            \textbf{R} (Tidyverse, Jupyter), 
+            \textbf{SQL} (Oracle, MySQL, Databricks), 
+            \textbf{No-SQL} (MongoDB, Firebase), 
+            HTML, CSS, Raspberry Pi, 
+            \textbf{Office 365} (VBA, Excel, Word, PowerBI), Problem Solving, Critical Thinking, Adaptability, Leadership, Teamwork, Time Management
+        \end{onecolentry}
+
+\end{document}
