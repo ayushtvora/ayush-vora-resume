@@ -189,13 +189,13 @@
     \section{Skills}
         \begin{onecolentry}
         \begin{highlights}
-            \item \textbf{Languages:} Python, Java, JavaScript, TypeScript, PHP, Go, Rust, C, C++, C\#, Swift, HTML, CSS, R, VBA, Bash  
+            \item \textbf{Languages:} Python, Java, JavaScript, TypeScript, C, C++, C\#, PHP, Go, Rust, Swift, HTML, CSS, R, VBA, Bash  
             
             \item \textbf{Database:} SQL, No-SQL, MySQL, PostgreSQL, Oracle, SQLite, MongoDB, Firebase, Databricks, Tableau, Spark, Salesforce, PowerBI
             
-            \item \textbf{Frameworks:} Node.js, Django, FastAPI, Flask, React, React Native, Angular, Swing, Docker, Kubernetes, PyTorch, TensorFlow, Tidyverse 
+            \item \textbf{Frameworks:} Node.js, Django, FastAPI, ASP.NET Core, Flask, React, React Native, Angular, SignalR, Swing, PyTorch, TensorFlow 
             
-            \item \textbf{Tools:} Git, GitHub, Azure, AWS, GCP, Android Studio, XCode, Jupyter, Shell, Raspberry Pi, Arduino, Unity, Excel, Windows, Linux
+            \item \textbf{Tools:} Git, GitHub, Docker, Azure, AWS, GCP, Android Studio, XCode, Jupyter, Raspberry Pi, Arduino, Unity, Excel, Windows, Linux
         \end{highlights}
 
         \end{onecolentry}
@@ -208,10 +208,10 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Automated archival and optimization of Salesforce databases with Python and Selenium, freeing 520 GB of storage across 3 databases.
-            \item Mass-deployed MS Office 365 to 100+ computers via automation scripts, cutting setup time by 85\%, and set up client scheduling coordination and live feature demonstrations.
-            \item Onboarded 40+ staff across 6 departments, including setting up accounts in AD, managing SharePoint and Shared OneDrive permissions, and setting up and deploying Windows laptops.
-            \item Administered IT infrastructure across Active Directory, Entra ID, Intune, Azure, Hyper-V, and managed 4 Windows servers, supporting day-to-day systems operations.
+            \item Automated archival and optimization of \textbf{Salesforce} databases with \textbf{Python} and \textbf{Selenium}, freeing \textbf{520 GB} of storage across 3 databases.
+            \item Mass-deployed \textbf{MS Office 365} to \textbf{100+ computers} via automation scripts, cutting setup time by \textbf{85\%}, and coordinated client scheduling through \textbf{OneDesk} and \textbf{Outlook} alongside live feature demonstrations.
+            \item Onboarded \textbf{40+ staff} across \textbf{6 departments}, including setting up accounts in \textbf{AD}, managing \textbf{SharePoint} and Shared \textbf{OneDrive} permissions, and deploying Windows laptops with standardized imaging, \textbf{Fortinet FortiClient} VPN access, and asset tracking.
+            \item Administered IT infrastructure across \textbf{Active Directory}, \textbf{Entra ID}, \textbf{Intune}, \textbf{Azure}, \textbf{Hyper-V}, and managed \textbf{4 Windows servers}, resolving \textbf{25+ tickets weekly} and supporting day-to-day systems operations.
         \end{highlights}
     \end{onecolentry}
     \vspace{0.2 cm}
@@ -221,9 +221,9 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Implemented and iteratively improved MS Excel Macros using VBA to automate tasks and generate data visuals, saving 150+ hours of repetitive work annually.
-            \item Built an automated data pipeline into a Databricks SQL server, improving KPI dashboard generation efficiency and enabling ML model integration.
-            \item Fixed 12 bugs present in the Java-based report-generator METRIX, improving app efficiency and increasing productivity by 33\%. 
+            \item Implemented and iteratively improved MS Excel Macros using \textbf{VBA} to automate tasks and generate data visuals, saving \textbf{150+ hours} of repetitive work annually.
+            \item Built an automated data pipeline into a \textbf{Databricks} SQL server, improving \textbf{KPI dashboard} generation efficiency and enabling \textbf{ML-based anomaly and data quality detection}.
+            \item Fixed \textbf{12 bugs} present in the Java-based report-generator \textbf{METRIX}, improving app efficiency and increasing productivity by \textbf{33\%}.
         \end{highlights}
     \end{onecolentry}
         \vspace{0.2 cm}
@@ -233,10 +233,10 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Conducted weekly labs and tutorials for 150+ students across introductory, intermediate, and upper-year algorithms courses.
+            \item Conducted weekly labs and tutorials for \textbf{150+ students} across introductory, intermediate, and upper-year algorithms courses.
             \item Hosted office hours to provide individualized support, clarifying complex concepts and debugging student code.
             \item Graded assignments and exams with detailed feedback to help students identify and address gaps in understanding.
-            \item Received a 99.5\% favourable rating from students for clarity of explanations and approachability. 
+            \item Received a \textbf{99.5\% favourable rating} from students for clarity of explanations and approachability.
         \end{highlights}
     \end{onecolentry}
     \vspace{0.2 cm}
@@ -246,13 +246,46 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Deployed 200+ laptops and desktops successfully to 5 Air Canada offices, including YYZ International Airport.
-            \item Served as the primary point of contact for Air Canada YYZ Branch for technology installations, relocation, expansions, and modifications. 
+            \item Deployed \textbf{200+ laptops and desktops} successfully to \textbf{5 Air Canada offices}, including \textbf{YYZ International Airport}.
+            \item Served as the primary point of contact for \textbf{Air Canada YYZ Branch} for technology installations, relocation, expansions, and modifications.
+            \item Diagnosed and repaired hardware issues and tracked device inventory and serial numbers across all deployed units.
         \end{highlights}
     \end{onecolentry}
 
     
     \section{Projects}
+
+        \begin{twocolentry}
+        {\href{https://github.com/ayushtvora/server-dashboard}{github.com: server-dashboard}}
+            \textbf{Server Dashboard} - ASP.NET Core (.NET 8), Angular, SignalR, PostgreSQL, Docker
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built a self-hosted, real-time monitoring dashboard for \textbf{Ubuntu} servers, displaying uptime, resource usage, and \textbf{Docker} container health.
+                \item Used \textbf{SignalR} to stream live CPU, RAM, GPU (via nvidia-smi), and container metrics from an \textbf{ASP.NET Core} backend to \textbf{Angular} frontend.
+                \item Deployed with \textbf{Docker Compose} and an \textbf{Nginx} reverse proxy, gracefully handling servers without a GPU or Docker installed.
+                \item Wrote a \textbf{test suite} covering both the frontend and backend to verify dashboard reliability and API correctness.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}
+        {\href{https://github.com/ayushtvora/wakey-wakey}{github.com: wakey-wakey}}
+            \textbf{Wakey Wakey} - React, React Native, Express, Node.js, MongoDB
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developing a full-stack alarm clock app with routine-based alarm scheduling and snooze functionality.
+                \item Building alarm-dismiss challenges, including a \textbf{QR-code scanning challenge} requiring users to physically locate and scan a code, plus incentive messages to encourage waking up.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+
         \begin{twocolentry}
             {\href{https://github.com/ayushtvora/spoti-paw}{github.com: spoti-paw}}
             \textbf{SpotiPaw} - C (Arduino), Python (Flask), Spotify API. 
@@ -260,8 +293,8 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Developed a motion-controlled media player for Spotify, controlled by hand gestures and motion.
-                \item Created with an ultrasound sensor connected to an Arduino, linked to a Flask server managing the API. 
+                \item Developed a motion-controlled media player for \textbf{Spotify}, controlled by hand gestures and motion.
+                \item Created with an ultrasound sensor connected to an \textbf{Arduino}, linked to a \textbf{Flask} server managing the API.
             \end{highlights}
         \end{onecolentry}
 
@@ -275,9 +308,10 @@
         \begin{onecolentry}
             \begin{highlights}
                 \item Created an accessible website where the user can view different celestial objects, such as galaxies, planets, etc.
-                \item Used SQL to create different queries, including adding, removing, and updating current objects, and different views of current systems.
+                \item Used \textbf{SQL} to create different queries, including adding, removing, and updating current objects, and different views of current systems.
             \end{highlights}
         \end{onecolentry}
+
 
 
     \section{Education}
