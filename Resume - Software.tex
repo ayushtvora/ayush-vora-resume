@@ -189,13 +189,13 @@
     \section{Skills}
         \begin{onecolentry}
         \begin{highlights}
-            \item \textbf{Languages:} Python, Java, JavaScript, TypeScript, C, C++, C\#, PHP, Go, Rust, Swift, HTML, CSS, R, VBA, Bash  
+            \item \textbf{Languages:} JavaScript, TypeScript, Java, Python, C\#, C++, Rust, Swift, SQL, Kotlin, Go, C, Bash, PowerShell, PHP, R, VBA, HTML, CSS  
             
-            \item \textbf{Database:} SQL, No-SQL, MySQL, PostgreSQL, Oracle, SQLite, MongoDB, Firebase, Databricks, Tableau, Spark, Salesforce, PowerBI
+            \item \textbf{Database:} PostgreSQL, MongoDB, Elasticsearch, Redis, Databricks, Snowflake, MySQL, Tableau, SQLite, Spark, Salesforce, PowerBI
             
-            \item \textbf{Frameworks:} Node.js, Django, FastAPI, ASP.NET Core, Flask, React, React Native, Angular, SignalR, Swing, PyTorch, TensorFlow 
+            \item \textbf{Frameworks:} Node.js, Next.js, Vercel AI SDK, FastAPI, ASP.NET Core, React, React Native, Angular, Playwright, PyTorch, TensorFlow 
             
-            \item \textbf{Tools:} Git, GitHub, Docker, Azure, AWS, GCP, Android Studio, XCode, Jupyter, Raspberry Pi, Arduino, Unity, Excel, Windows, Linux
+            \item \textbf{Tools:} Git, GitHub Actions, Docker, Cloudflare Workers, Claude API, MCP, Azure, AWS, GCP, XCode, Jupyter, Raspberry Pi, Linux
         \end{highlights}
 
         \end{onecolentry}
@@ -234,8 +234,6 @@
     \begin{onecolentry}
         \begin{highlights}
             \item Conducted weekly labs and tutorials for \textbf{150+ students} across introductory, intermediate, and upper-year algorithms courses.
-            \item Hosted office hours to provide individualized support, clarifying complex concepts and debugging student code.
-            \item Graded assignments and exams with detailed feedback to help students identify and address gaps in understanding.
             \item Received a \textbf{99.5\% favourable rating} from students for clarity of explanations and approachability.
         \end{highlights}
     \end{onecolentry}
@@ -248,12 +246,57 @@
         \begin{highlights}
             \item Deployed \textbf{200+ laptops and desktops} successfully to \textbf{5 Air Canada offices}, including \textbf{YYZ International Airport}.
             \item Served as the primary point of contact for \textbf{Air Canada YYZ Branch} for technology installations, relocation, expansions, and modifications.
-            \item Diagnosed and repaired hardware issues and tracked device inventory and serial numbers across all deployed units.
         \end{highlights}
     \end{onecolentry}
 
     
     \section{Projects}
+
+        \begin{twocolentry}
+        {\href{https://github.com/ayushtvora/job-board-site}{GitHub: job-board-site}}
+            \textbf{Job Board} - Next.js, TypeScript, Python, Playwright, PostgreSQL, Prisma, Docker
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built a self-hosted job tracker that scrapes \textbf{159 company career sites} daily with \textbf{Python}, \textbf{Playwright}, and \textbf{BeautifulSoup}, serving listings from \textbf{PostgreSQL} through a \textbf{Next.js} app with filters and "applied" tracking.
+                \item Designed \textbf{idempotent upserts} on deterministic job IDs, keeping applied history after listings close and flagging failed scrapes.
+                \item Wrote shared scrapers for ATS platforms like \textbf{Workday} and \textbf{Greenhouse}, run in parallel with \textbf{per-host rate limiting}.
+                \item Deployed with \textbf{Docker Compose} via \textbf{GitHub Actions} with \textbf{Prisma} migrations, a \textbf{WireGuard} VPN for scraping, and \textbf{Cloudflare Access}.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}
+        {\href{https://github.com/ayushtvora/life-organizer-api}{GitHub: life-organizer-api}}
+            \textbf{Life Organizer API} - ASP.NET Core (.NET 10), Claude API, Google Calendar API, Docker
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built an API behind an iPhone Shortcut that turns notes like "meeting 4-5pm wed" into \textbf{Google Calendar} events or \textbf{Todoist} tasks.
+                \item Designed a hybrid parser: deterministic date rules first, with an \textbf{LLM} fallback (\textbf{Claude API}, structured JSON) when confidence is low.
+                \item Wrote \textbf{45+ xUnit tests} and a \textbf{GitHub Actions} CI/CD pipeline deploying a \textbf{Docker} image to a home server behind \textbf{Cloudflare Tunnel}.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}
+        {\href{https://github.com/ayushtvora/wakey-wakey}{GitHub: wakey-wakey}}
+            \textbf{Wakey Wakey} - React Native (Expo), TypeScript, Swift, Cloudflare Workers
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built an iOS alarm that only stops after a chain of challenges (\textbf{math}, \textbf{QR/barcode scan}, \textbf{steps}), using \textbf{AlarmKit} via a custom \textbf{Swift} module.
+                \item Wrote a \textbf{Cloudflare Worker} watchdog with \textbf{Durable Objects} that posts a \textbf{Discord} "punishment" on time, even if the phone is off.
+                \item Shared alarm and streak logic in a \textbf{TypeScript} package with \textbf{40+ Vitest tests}; \textbf{GitHub Actions} builds the iOS app on macOS runners.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
 
         \begin{twocolentry}
         {\href{https://github.com/ayushtvora/server-dashboard}{GitHub: server-dashboard}}
@@ -262,53 +305,9 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Built a self-hosted, real-time monitoring dashboard for \textbf{Ubuntu} servers, displaying uptime, resource usage, and \textbf{Docker} container health.
-                \item Used \textbf{SignalR} to stream live CPU, RAM, GPU (via nvidia-smi), and container metrics from an \textbf{ASP.NET Core} backend to \textbf{Angular} frontend.
-                \item Deployed with \textbf{Docker Compose} and an \textbf{Nginx} reverse proxy, gracefully handling servers without a GPU or Docker installed.
-                \item Wrote a \textbf{test suite} covering both the frontend and backend to verify dashboard reliability and API correctness.
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \begin{twocolentry}
-        {\href{https://github.com/ayushtvora/wakey-wakey}{GitHub: wakey-wakey}}
-            \textbf{Wakey Wakey} - React, React Native, Express, Node.js, MongoDB
-        \end{twocolentry}
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Developing a full-stack alarm clock app with routine-based alarm scheduling and snooze functionality.
-                \item Building alarm-dismiss challenges, including a \textbf{QR-code scanning challenge} requiring users to physically locate and scan a code, plus incentive messages to encourage waking up.
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-
-        \begin{twocolentry}
-            {\href{https://github.com/ayushtvora/spoti-paw}{GitHub: spoti-paw}}
-            \textbf{SpotiPaw} - C (Arduino), Python (Flask), Spotify API. 
-        \end{twocolentry}
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Developed a motion-controlled media player for \textbf{Spotify}, controlled by hand gestures and motion.
-                \item Created with an ultrasound sensor connected to an \textbf{Arduino}, linked to a \textbf{Flask} server managing the API.
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \begin{twocolentry}
-        {\href{https://github.com/ayushtvora/SNASA}{GitHub: SNASA}}
-            \textbf{SNASA} - PHP, SQL (Oracle), HTML, JS 
-        \end{twocolentry}
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Created an accessible website where the user can view different celestial objects, such as galaxies, planets, etc.
-                \item Used \textbf{SQL} to create different queries, including adding, removing, and updating current objects, and different views of current systems.
+                \item Built a real-time dashboard for \textbf{Ubuntu} servers, streaming CPU, RAM, GPU, and \textbf{Docker} metrics to \textbf{Angular} via \textbf{SignalR}.
+                \item Collected metrics from \textbf{/proc}, \textbf{nvidia-smi}, and the \textbf{Docker socket}, degrading gracefully when a GPU or Docker isn't present.
+                \item Deployed with \textbf{Docker Compose} and an \textbf{Nginx} reverse proxy, with a \textbf{test suite} covering both frontend and backend.
             \end{highlights}
         \end{onecolentry}
 
