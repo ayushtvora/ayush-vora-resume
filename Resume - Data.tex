@@ -1,12 +1,12 @@
-\documentclass[10pt, letterpaper]{article}
+\documentclass[9pt, letterpaper]{extarticle}
 
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=2 cm, % seperation between body and page edge from the top
-    bottom=2 cm, % seperation between body and page edge from the bottom
-    left=2 cm, % seperation between body and page edge from the left
-    right=2 cm, % seperation between body and page edge from the right
+    top=1cm, % seperation between body and page edge from the top
+    bottom=1cm, % seperation between body and page edge from the bottom
+    left=1cm, % seperation between body and page edge from the left
+    right=1cm, % seperation between body and page edge from the right
     footskip=1.0 cm, % seperation between body and footer
     % showframe % for debugging 
 ]{geometry} % for adjusting page geometry
@@ -160,9 +160,8 @@
     \sbox\ANDbox{$|$}
 
     \begin{header}
-        \fontsize{20 pt}{20 pt}\selectfont Ayush Vora
+        \fontsize{18 pt}{18 pt}\selectfont Ayush Vora
 
-        \vspace{5 pt}
 
         \normalsize
         \mbox{Toronto, ON}%
@@ -170,6 +169,10 @@
         \AND%
         \kern 5.0 pt%
         \mbox{\hrefWithoutArrow{mailto:ayushtvora@gmail.com}{ayushtvora@gmail.com}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{647-573-4479}%
         \kern 5.0 pt%
         \AND%
         \kern 5.0 pt%
@@ -183,17 +186,21 @@
 
     \vspace{5 pt - 0.3 cm}
 
-
-    \section{Education}
-    \begin{twocolentry}{Sep 2021 – May 2026}
-        \textbf{University of British Columbia}, B.Sc, Computer Science and Statistics
-    \end{twocolentry}
-    \vspace{0.10 cm}
-    \begin{onecolentry}
+    \section{Skills}
+        \begin{onecolentry}
         \begin{highlights}
-            \item \textbf{Cumulative Average:} 86.1\%, 3.98/4.33 GPA
+            \item \textbf{Languages:} Python, SQL, R, VBA, Java, C++, C\#, TypeScript, JavaScript, Bash, C, Go, Rust, Kotlin, Swift, PowerShell, PHP, HTML, CSS
+
+            \item \textbf{Statistics \& ML:} Regression, Lasso/Ridge, Time Series (ARIMA), Random Forests, Boosting, PCA, Clustering, Cross-Validation
+
+            \item \textbf{Libraries:} pandas, NumPy, scikit-learn, PyTorch, TensorFlow, Matplotlib, tidyverse, ggplot2, forecast, glmnet, BeautifulSoup
+
+            \item \textbf{Data \& BI:} Databricks, Snowflake, Spark, PostgreSQL, MySQL, SQLite, MongoDB, Elasticsearch, Redis, Tableau, Power BI, Excel, Salesforce
+
+            \item \textbf{Tools:} Jupyter, Git, GitHub Actions, Docker, AWS, Azure, GCP, Claude API, MCP, Linux, Cloudflare Workers
         \end{highlights}
-    \end{onecolentry}
+
+        \end{onecolentry}
 
 
     \section{Experience}
@@ -203,8 +210,10 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Automated archival and optimization of company's Salesforce database, clearing out 520 GB of storage for future use.
-            \item Mass-deployed MS Office 365 to 100+ computers, involving organizing appointments with clients, creating automation scripts, and presenting a demonstration of new features.
+            \item Automated archival and optimization of \textbf{Salesforce} databases with \textbf{Python} and \textbf{Selenium}, freeing \textbf{520 GB} of storage across 3 databases.
+            \item Mass-deployed \textbf{MS Office 365} to \textbf{100+ computers} via automation scripts, cutting setup time by \textbf{85\%}, and coordinated client scheduling through \textbf{OneDesk} and \textbf{Outlook} alongside live feature demonstrations.
+            \item Onboarded \textbf{40+ staff} across \textbf{6 departments}, including setting up accounts in \textbf{AD}, managing \textbf{SharePoint} and Shared \textbf{OneDrive} permissions, and deploying Windows laptops with standardized imaging, \textbf{Fortinet FortiClient} VPN access, and asset tracking.
+            \item Administered IT infrastructure across \textbf{Active Directory}, \textbf{Entra ID}, \textbf{Intune}, \textbf{Azure}, \textbf{Hyper-V}, and managed \textbf{4 Windows servers}, resolving \textbf{25+ tickets weekly} and supporting day-to-day systems operations.
         \end{highlights}
     \end{onecolentry}
     \vspace{0.2 cm}
@@ -214,9 +223,9 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Built an automated data pipeline into a Databricks SQL server, improving KPI dashboard generation efficiency and enabling ML model integration.
-            \item Implemented and iteratively improved MS Excel Macros using VBA to automate tasks and generate data visuals, saving 150+ hours of repetitive work annually.
-            \item Fixed 12 bugs present in the Java-based report-generator METRIX, improving app efficiency and increasing productivity by 33\%. 
+            \item Implemented and iteratively improved MS Excel Macros using \textbf{VBA} to automate tasks and generate data visuals, saving \textbf{150+ hours} of repetitive work annually.
+            \item Built an automated data pipeline into a \textbf{Databricks} SQL server, improving \textbf{KPI dashboard} generation efficiency and enabling \textbf{ML-based anomaly and data quality detection}.
+            \item Fixed \textbf{12 bugs} present in the Java-based report-generator \textbf{METRIX}, improving app efficiency and increasing productivity by \textbf{33\%}.
         \end{highlights}
     \end{onecolentry}
         \vspace{0.2 cm}
@@ -226,9 +235,8 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Led weekly labs and tutorials for 150+ students across introductory, intermediate, and upper-year algorithms courses.
-            \item Held office hours to provide individualized support, clarifying complex concepts, debugging code, and providing feedback.
-            \item Received consistently positive student evaluations for clarity of explanations and approachability. 
+            \item Conducted weekly labs and tutorials for \textbf{150+ students} across introductory, intermediate, and upper-year algorithms courses.
+            \item Received a \textbf{99.5\% favourable rating} from students for clarity of explanations and approachability.
         \end{highlights}
     \end{onecolentry}
     \vspace{0.2 cm}
@@ -238,56 +246,77 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Deployed 200+ laptops and desktops successfully to 5 Air Canada offices, including YYZ International Airport.
-            \item Served as the primary point of contact for Air Canada YYZ Branch for IMAC needs.
+            \item Deployed \textbf{200+ laptops and desktops} successfully to \textbf{5 Air Canada offices}, including \textbf{YYZ International Airport}.
+            \item Served as the primary point of contact for \textbf{Air Canada YYZ Branch} for technology installations, relocation, expansions, and modifications.
         \end{highlights}
     \end{onecolentry}
 
     
     \section{Projects}
+
         \begin{twocolentry}
-        {\href{https://github.com/ayushtvora/SNASA}{github.com: SNASA}}
-            \textbf{SNASA}
+        {\href{https://github.com/ayushtvora/job-board-site}{GitHub: job-board-site}}
+            \textbf{Job Market Data Pipeline} - Python, PostgreSQL, Playwright, Claude API, Docker
         \end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Created an accessible website where the user can view different celestial objects, such as galaxies, planets, etc.
-                \item Used SQL to create different queries, including adding, removing, and updating current objects, and different views of current systems.
-                \item Tools Used: PHP, SQL (Oracle), HTML, JS 
+                \item Built a daily \textbf{ETL pipeline} scraping \textbf{159 company career sites} with \textbf{Python} and \textbf{Playwright} into \textbf{PostgreSQL}.
+                \item Kept data clean with \textbf{idempotent upserts} on deterministic IDs, per-host rate limiting, and run logs that flag failed or empty scrapes.
+                \item Scored each posting \textbf{0--100} for resume fit with an \textbf{LLM}, extracting matched and missing skills as structured output, and cached scores by a hash of resume, model, and prompt version to avoid re-scoring.
             \end{highlights}
         \end{onecolentry}
 
         \vspace{0.2 cm}
 
         \begin{twocolentry}
-            {\href{https://github.com/ayushtvora/spoti-paw}{github.com: spoti-paw}}
-            \textbf{SpotiPaw}
+        {\href{https://github.com/ayushtvora/stat-443-project}{GitHub: stat-443-project}}
+            \textbf{Fuel Price Spread Forecasting} - R, forecast, tidyverse, ggplot2
         \end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Developed a motion-controlled media player for Spotify, controlled by hand gestures and motion.
-                \item Created with an ultrasound sensor connected to an Arduino, linked to a Flask server managing the API. 
-                \item Tools Used: C (Arduino), Python (Flask), Spotify API. 
+                \item Forecast the weekly U.S. gasoline--diesel price spread (\textbf{1,361 weeks}, 1995--2021) in a team of 4, comparing \textbf{exponential smoothing}, \textbf{ARIMA/SARIMA}, and \textbf{ARIMAX} on a \textbf{104-week} rolling holdout.
+                \item Led \textbf{EDA} and data cleaning, finding a \textbf{2008 structural break} and using \textbf{ACF} diagnostics to show the series was non-stationary.
+                \item Selected \textbf{ARIMA(4,1,3)}, cutting RMSE \textbf{20\%} below persistence with white-noise residuals; lagged oil-price regressors added no gain.
             \end{highlights}
         \end{onecolentry}
 
+        \vspace{0.2 cm}
 
-
-    \section{Skills}
+        \begin{twocolentry}
+        {\href{https://github.com/ayushtvora/stat-301-group-project}{GitHub: stat-301-group-project}}
+            \textbf{World University Rankings Model} - R, tidyverse, glmnet, ggplot2
+        \end{twocolentry}
+        \vspace{0.10 cm}
         \begin{onecolentry}
-            \textbf{JavaScript} (React/React Native, Node.js), 
-            \textbf{Python} (FastAPI, Flask), 
-            \textbf{Java} (Android Studio, Swing), 
-            \textbf{C} (Arduino), 
-            \textbf{C++}, 
-            \textbf{C\#} (Unity), 
-            \textbf{R} (Tidyverse, Jupyter), 
-            \textbf{SQL} (Oracle, MySQL, Databricks), 
-            \textbf{No-SQL} (MongoDB, Firebase), 
-            HTML, CSS, Raspberry Pi, 
-            \textbf{Office 365} (VBA, Excel, Word, PowerBI), Problem Solving, Critical Thinking, Adaptability, Leadership, Teamwork, Time Management
+            \begin{highlights}
+                \item Modelled what drives the overall scores of \textbf{1,799 universities} (team of 3) using \textbf{EDA} and residual diagnostics.
+                \item Detected \textbf{multicollinearity} with \textbf{VIF}, then used \textbf{Lasso regression} with \textbf{10-fold cross-validation} on a \textbf{70/30 train-test split} to cut \textbf{9 predictors to 5} with no loss in adjusted $R^2$.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}
+        {\href{https://github.com/ayushtvora/moment-matching}{GitHub: moment-matching}}
+            \textbf{Directed Research: Distribution Support Size} - Probability Theory, LaTeX
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Wrote a paper under a UBC faculty supervisor on \textbf{moment matching} lower bounds for estimating a distribution's \textbf{support size}, plus notes on \textbf{Chernoff bounds} and \textbf{Poissonization}.
+            \end{highlights}
+        \end{onecolentry}
+    \section{Education}
+        \begin{twocolentry}{Sep 2021 – May 2026}
+            \textbf{University of British Columbia}, Bachelor of Science, Computer Science and Statistics
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Courses:} Machine Learning, Statistical Learning, Statistical Inference, Statistical Modelling, Databases, Algorithms, Operating Systems
+            \end{highlights}
         \end{onecolentry}
 
 \end{document}
